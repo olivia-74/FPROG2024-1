@@ -1,3 +1,6 @@
+https://github.com/olivia-74/FPROG2024-1/blob/main/lista-1.txt
+
+
 Lista de Exercícios 1 – Fundamentos de Programação
 Comandos de Entrada/Saída e Variáveis
 1. Utilizando o OnlineGDB, pesquise e implemente um programa que escreva na tela “Olá Mundo!” em 3 linguagens de programação diferentes. Qual é o comando de saída de dados nestas 3 linguagens?
