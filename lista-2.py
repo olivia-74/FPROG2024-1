@@ -43,23 +43,40 @@ print(f"é possível abastecer {qtdAbastecer:.2f} litros")
 # com a venda dos smartphones e dos tablets. Escreva um programa que leia o número de smartphones e tablets vendidos em 
 # um dia e calcule o total arrecadado.
 
-
-
+qtdTablets = int(input("insira a quantidade de tablets vendidos: "))
+qtdSmartphones = int(input("insira a quantidade de smartphones vendidos: "))
+valorTotal = (qtdTablets*1500) + (qtdSmartphones*1000)
+print(f"o total arrecadado hoje foi {valorTotal:.2f} reais")
 
 # 7. Um criador de pássaros deseja saber a quantidade de ração diária necessária para alimentar seus pássaros. Cada 
 # pássaro consome 30 gramas de ração por dia. Escreva um programa que leia o número de pássaros que o criador possui e 
 # calcule a quantidade total de ração necessária por dia.
 
+qtdPassaros = int(input("insira a quantidade de pássaros: "))
+qtdRacao = qtdPassaros * 30
+print(f"é necessário {qtdPassaros} gramas de ração para alimentar todos os pássaros")
 
 # 8. Um usuário deseja converter a temperatura de Celsius para Fahrenheit. Escreva um programa que leia a temperatura em
 # Celsius e exiba a temperatura equivalente em Fahrenheit.
 
+temperaturaCelsius = int(input("insira a temperatura em Celsius: "))
+temperaturaFahrenheit = round((temperaturaCelsius - 32) / 1.8)
+print(f"{temperaturaCelsius} C° equivale a {temperaturaFahrenheit} F°")
 
 # 9. Durante uma liquidação uma loja resolveu dar quinze por cento de desconto nas compras feitas pelos clientes. Faça um 
 # programa que leia o valor da compra e escreva o valor da compra com o desconto.
-
+valorCompra = float(input("insira o valor da compra: "))
+valorDesconto = valorCompra * 0.15
+print(f"o valor da compra com desconto será {valorCompra - valorDesconto}")
 
 # 10. O lojista gostou tanto do seu programa anterior que encomendou outro. Dessa vez ele quer que você calcule quanto 
 # cada cliente gastou na loja apenas informando o número de camisetas, calças e cintos comprados. As camisetas custam 
 # R$ 25,00, as calças cem reais e os cintos 40 reais. Some o valor da compra e ao final dê um desconto de 10 por cento 
 # sobre o total. Exiba na tela o valor do desconto e o valor da compra.
+
+camisetas = int(input("quantidade de camisetas: "))
+calcas = int(input("quantidade de calças: "))
+cintos = int(input("quantidade de cintos: "))
+valorCompra = (camisetas * 25) + (calcas + 100) + (cintos + 40)
+desconto = valorCompra * 0.10
+print(f"o valor da compra seria R${valorCompra}, menos o desconto de R${desconto}, sendo o total R${valorCompra - desconto}")
