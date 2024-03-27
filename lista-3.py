@@ -56,29 +56,55 @@ while True:
         print(f"{valor} é ímpar")
         
 # 6) Brincadeira do PAR ou ÍMPAR. Pergunte para o usuário se ele aposta em PAR ou ÍMPAR. Depois disso, peça para ele digitar um número de 0 a 5 (como se fosse mostrar os dedos da mão). Sorteie um número de 0 a 5 e some com o que o usuário digitou. Se o usuário escolheu PAR e o valor da soma for par OU se ele escolheu ÍMPAR e o valor da soma é ímpar, diga que ele venceu. Senão, diga que o programa venceu. 
-# TERMINAR
+
 import random
 possibilidades = [0, 1, 2, 3, 4, 5]
 while True:
     aposta = input("aposte par ou impar: ")
-    if (aposta == "par") or aposta == "impar":
+    if (aposta == "par") or (aposta == "impar"):
         valor = int(input("digite um número de 0 a 5: "))
-            if (0 < valor) or (valor > 5):
-                resultado = (random.choice(possibilidades)) + valor
-                print(f"par ou ímpar: {valor} + {resultado}")
-                if resultado % 2 == 0 and aposta == "par" or resultado % 2 != 0 and aposta == "impar":
-                    print("você venceu")
-                else:
-                    print("eu venci")
-                break
+        if 0 <= valor <= 5:
+            sorteio = (random.choice(possibilidades))
+            resultado = sorteio + valor
+            print(f"par ou ímpar: {valor} + {resultado}")
+            if resultado % 2 == 0 and aposta == "par" or resultado % 2 != 0 and aposta == "impar":
+                print("você venceu")
             else:
-                break
+                print("eu venci 😎😎😎😎😎😎😎😎😎")
+            break
+        else:
+            break
     else:
         continue
-
+    
+        
 # 7) Implementar um programa que calcula o desconto previdenciário de um funcionário. O programa deve, dado um salário retornar o valor do desconto proporcional ao mesmo. O cálculo de desconto segue a regra: o desconto deve 11% do valor do salário. Entretanto, o valor máximo de desconto é 318,20. Sendo assim, ou o método retorna 11% sobre o salário ou 318,20.
 
+salario = float(input("insira seu salário: "))
+desconto = salario * 0.11
+maximo = 318.20
+
+if desconto < maximo:
+    print(f"será descontado {desconto} reais do seu salário")
+elif desconto >= maximo:
+    print(f"será descontado {maximo} reais do seu salário")
+
+
 # 8) Um comerciante comprou um produto e quer vendê-lo com lucros diferentes dependendo do valor da compra. Ele quer um lucro de 45% se o valor da compra for menor que R$ 20,00, 35% se o preço for de até 50 reais e lucro de 25% se valor for maior. Entrar com o valor do produto e imprimir na tela o valor de venda.
+
+valorCompra = float(input("insira o valor do produto: "))
+
+if valorCompra < 20:
+    lucro = 0.45
+elif valorCompra < 50:
+    lucro = 0.35
+else:
+    lucro = 0.25
+    
+valorVenda = (1 + lucro) * valorCompra
+
+print(f"o valor da venda deve ser: {valorVenda}")
+
 
 # 9) Faça um conversor de câmbio de reais/dólar/euro. O usuário deve informar inicialmente a cotação de cada moeda em relação ao real. Depois apresente o seguinte menu:
 #     1) Converter de Real para Euro
