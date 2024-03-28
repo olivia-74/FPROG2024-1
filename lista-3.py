@@ -105,7 +105,7 @@ valorVenda = (1 + lucro) * valorCompra
 
 print(f"o valor da venda deve ser: {valorVenda}")
 
-***
+***DUVIDASA
 # 9) Faça um conversor de câmbio de reais/dólar/euro. O usuário deve informar inicialmente a cotação de cada moeda em relação ao real. Depois apresente o seguinte menu:
 #     1) Converter de Real para Euro
 #     2) Converter de Real para Dólar
@@ -113,8 +113,28 @@ print(f"o valor da venda deve ser: {valorVenda}")
 #     4) Converter de Euro para Real
 #     5) Converter de Dólar para Euro
 #     6) Converter de Dólar para Real
-# Leia o valor a ser convertido na moeda de origem e imprima na tela a quantidade na moeda
-# destino.
+# Leia o valor a ser convertido na moeda de origem e imprima na tela a quantidade na moeda destino.
+
+1 = "1) Converter de Real para Euro"
+2 = "2) Converter de Real para Dólar"
+3 = "3) Converter de Euro para Dólar"
+4 = "4) Converter de Euro para Real"
+5 = "5) Converter de Dólar para Euro"
+6 = "6) Converter de Dólar para Real"
+
+alternativas = [1, 2, 3, 4, 5, 6]
+
+cotacaoDolar  = float(input("insira a cotação do dólar:  "))
+cotacaoEuro  = float(input("insira a cotação do euro:  "))
+
+print("MENU:") 
+for i in (alternativas):
+    print(i)
+operacao, valor = input("digite o número da operação que deseja realizar e o valor a ser convertido: ").split()
+
+if operacao == 1:
+    valor * 
+     
 
 # 10) Dados não precisam ser tão “quadrados”, ou cúbicos para ser mais exato. Faça um programa que simule dados de 4, 6, 8, 10, 12 ou 16 faces (apenas estes valores). Peça para o usuário informar no começo do programa quantas faces quer, para depois fazer o sorteio.
 
