@@ -105,7 +105,7 @@ valorVenda = (1 + lucro) * valorCompra
 
 print(f"o valor da venda deve ser: {valorVenda}")
 
-
+***
 # 9) Faça um conversor de câmbio de reais/dólar/euro. O usuário deve informar inicialmente a cotação de cada moeda em relação ao real. Depois apresente o seguinte menu:
 #     1) Converter de Real para Euro
 #     2) Converter de Real para Dólar
