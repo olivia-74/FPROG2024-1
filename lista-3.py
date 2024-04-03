@@ -115,33 +115,134 @@ print(f"o valor da venda deve ser: {valorVenda}")
 #     6) Converter de Dólar para Real
 # Leia o valor a ser convertido na moeda de origem e imprima na tela a quantidade na moeda destino.
 
-1 = "1) Converter de Real para Euro"
-2 = "2) Converter de Real para Dólar"
-3 = "3) Converter de Euro para Dólar"
-4 = "4) Converter de Euro para Real"
-5 = "5) Converter de Dólar para Euro"
-6 = "6) Converter de Dólar para Real"
+    
+cotacaoDolar = float(input("insira a cotação do dólar:  "))
+cotacaoEuro = float(input("insira a cotação do euro: "))
+    
+    # Menu de opções
+print("\nMenu:")
+print("1) Converter de Real para Euro")
+print("2) Converter de Real para Dólar")
+print("3) Converter de Euro para Dólar")
+print("4) Converter de Euro para Real")
+print("5) Converter de Dólar para Euro")
+print("6) Converter de Dólar para Real")
+    
+opcao = int(input("Escolha uma opção: "))
+    
+if opcao == 1:
+    valor = float(input("Digite o valor em Reais: "))
+    resultado = valor / cotacaoEuro
+    print(f"Valor em Euro: {resultado}")
+        
+elif opcao == 2:
+    valor = float(input("Digite o valor em Reais: "))
+    resultado = valor / cotacaoDolar
+    print(f"Valor em Dólar: {resultado}")
+    
+elif opcao == 3:
+    valor = float(input("Digite o valor em Euro: "))
+    resultado = valor / cotacaoEuro / cotacaoDolar
+    print(f"Valor em Dólar: {resultado}")
+    
+elif opcao == 4:
+    valor = float(input("Digite o valor em Euro: "))
+    resultado = valor * cotacaoEuro
+    print(f"Valor em Reais: {resultado}")
+    
+elif opcao == 5:
+    valor = float(input("Digite o valor em Dólar: "))
+    resultado = valor * cotacaoDolar
+    print(f"Valor em Euro: {resultado}")
+    
+elif opcao == 6:
+    valor = float(input("Digite o valor em Dólar: "))
+    resultado = valor * cotacaoDolar
+    print(f"Valor em Reais: {resultado}")
+    
+else:
+    print("Opção inválida.")
+    
+ou 
 
-alternativas = [1, 2, 3, 4, 5, 6]
+    real_para_euro = float(input("Digite a cotação de 1 Real para Euro: "))
+    real_para_dolar = float(input("Digite a cotação de 1 Real para Dólar: "))
+    euro_para_dolar = float(input("Digite a cotação de 1 Euro para Dólar: "))
+    
+    print("\nMenu:")
+    print("1) Converter de Real para Euro")
+    print("2) Converter de Real para Dólar")
+    print("3) Converter de Euro para Dólar")
+    print("4) Converter de Euro para Real")
+    print("5) Converter de Dólar para Euro")
+    print("6) Converter de Dólar para Real")
+    
+    opcao = int(input("\nEscolha uma opção: "))
+    
+    # Realiza a conversão baseado na opção escolhida
+    if opcao == 1:
+        valor = float(input("Digite o valor em Reais: "))
+        resultado = valor / real_para_euro
+        print(f"Valor em Euro: {resultado}")
+    elif opcao == 2:
+        valor = float(input("Digite o valor em Reais: "))
+        resultado = valor / real_para_dolar
+        print(f"Valor em Dólar: {resultado}")
+    elif opcao == 3:
+        valor = float(input("Digite o valor em Euro: "))
+        resultado = valor * euro_para_dolar
+        print(f"Valor em Dólar: {resultado}")
+    elif opcao == 4:
+        valor = float(input("Digite o valor em Euro: "))
+        resultado = valor / real_para_euro
+        print(f"Valor em Reais: {resultado}")
+    elif opcao == 5:
+        valor = float(input("Digite o valor em Dólar: "))
+        resultado = valor / euro_para_dolar
+        print(f"Valor em Euro: {resultado}")
+    elif opcao == 6:
+        valor = float(input("Digite o valor em Dólar: "))
+        resultado = valor / real_para_dolar
+        print(f"Valor em Reais: {resultado}")
+    else:
+        print("Opção inválida.")
 
-cotacaoDolar  = float(input("insira a cotação do dólar:  "))
-cotacaoEuro  = float(input("insira a cotação do euro:  "))
 
-print("MENU:") 
-for i in (alternativas):
-    print(i)
-operacao, valor = input("digite o número da operação que deseja realizar e o valor a ser convertido: ").split()
-
-if operacao == 1:
-    valor * 
-     
 
 # 10) Dados não precisam ser tão “quadrados”, ou cúbicos para ser mais exato. Faça um programa que simule dados de 4, 6, 8, 10, 12 ou 16 faces (apenas estes valores). Peça para o usuário informar no começo do programa quantas faces quer, para depois fazer o sorteio.
+
+import random
+
+while True:
+    
+    qtdFaces = int(input("insira a quantidade de faces do dado (4, 6, 8, 10, 12 e 16): "))
+    
+    if qtdFaces in [4, 6, 8, 10, 12, 16]:
+        resultado = random.randint(1, qtdFaces)
+        print(f"o valor sorteado foi: {resultado}")
+        break
+    else:
+        print("quantidade de faces inválida. Escolha entre 4, 6, 8, 10, 12 e 16")
+
+
 
 # 11) Crie um programa para informar quais e quantas notas são necessárias para entregar o mínimo de cédulas para um determinado valor informado pelo usuário considerando notas de R$ 100, R$ 50, R$ 20, R$ 10 e R$ 5 e R$ 1. Seu programa deve mostrar apenas as notas utilizadas. Por exemplo, ao solicitar R$18, o programa deve informar apenas a seguinte informação (note que não foram exibidas informações sobre as demais cédulas):
 #     1 nota(s) de R$ 10.
 #     1 nota(s) de R$ 5.
 #     3 nota(s) de R$ 1.
+
+valor = int(input("Digite o valor desejado: "))
+arrayNotas = [100, 50, 20, 10, 5, 1]
+resultado = {}
+
+print("Notas utilizadas:")
+for nota in arrayNotas:
+    if valor >= nota:
+        qtdNotas = valor // nota
+        resultado[nota] = qtdNotas
+        valor -= qtdNotas * nota
+        print(f"{qtdNotas} nota(s) de R$ {nota}")
+
 
 # 12) A confederação brasileira de natação irá promover eliminatórias para o próximo mundial. Fazer um algoritmo que receba a idade de um nadador e imprima a sua categoria segundo a tabela a seguir: 
 #     Categoria Idade
@@ -150,6 +251,20 @@ if operacao == 1:
 #         Juvenil A 11-13 anos
 #         Juvenil B 14-17 anos
 #         Sênior Maiores de 18 anos
+
+if 5 <= idade <= 7:
+    categoria = "Infantil A"
+elif 8 <= idade <= 10:
+    categoria = "Infantil B"
+elif 11 <= idade <= 13:
+    categoria = "Juvenil A"
+elif 14 <= idade <= 17:
+    categoria = "Juvenil B"
+else:
+    categoria = "Sênior"
+
+print(f"sua categoria é: {categoria}")
+
 
 # 13) Faça um programa que leia a nota do Grau A e do Grau B do aluno e calcule a média final conforme as regras da Unisinos. Imprima a média final na tela e diga se o aluno passou por média ou se ficou em recuperação (grau C). Se o aluno ficou em recuperação, pergunte se ele quer substituir o Grau A ou o Grau B (ele deve digitar ‘a’ ou ‘b’). Leia a nota do Grau C, recalcule a média de acordo com o grau substituído e imprima na tela o resultado, informando se ele foi aprovado ou reprovado.
 
