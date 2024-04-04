@@ -105,7 +105,7 @@ valorVenda = (1 + lucro) * valorCompra
 
 print(f"o valor da venda deve ser: {valorVenda}")
 
-***DUVIDASA
+***DUVIDASSSS
 # 9) Faça um conversor de câmbio de reais/dólar/euro. O usuário deve informar inicialmente a cotação de cada moeda em relação ao real. Depois apresente o seguinte menu:
 #     1) Converter de Real para Euro
 #     2) Converter de Real para Dólar
@@ -119,8 +119,7 @@ print(f"o valor da venda deve ser: {valorVenda}")
 cotacaoDolar = float(input("insira a cotação do dólar:  "))
 cotacaoEuro = float(input("insira a cotação do euro: "))
     
-    # Menu de opções
-print("\nMenu:")
+print("Menu:")
 print("1) Converter de Real para Euro")
 print("2) Converter de Real para Dólar")
 print("3) Converter de Euro para Dólar")
@@ -179,7 +178,6 @@ ou
     
     opcao = int(input("\nEscolha uma opção: "))
     
-    # Realiza a conversão baseado na opção escolhida
     if opcao == 1:
         valor = float(input("Digite o valor em Reais: "))
         resultado = valor / real_para_euro
@@ -268,11 +266,57 @@ print(f"sua categoria é: {categoria}")
 
 # 13) Faça um programa que leia a nota do Grau A e do Grau B do aluno e calcule a média final conforme as regras da Unisinos. Imprima a média final na tela e diga se o aluno passou por média ou se ficou em recuperação (grau C). Se o aluno ficou em recuperação, pergunte se ele quer substituir o Grau A ou o Grau B (ele deve digitar ‘a’ ou ‘b’). Leia a nota do Grau C, recalcule a média de acordo com o grau substituído e imprima na tela o resultado, informando se ele foi aprovado ou reprovado.
 
+grauA = float(input("insira a nota do grau A: "))
+grauB = float(input("insira a nota do grau B: "))
+mediaFinal = ((grauA + grauB*2)/3)
+
+print(f"a média final será: {format(mediaFinal, '.2f')}")
+
+if mediaFinal >= 6:
+    print("o aluno passou por media")
+else:
+    print("o aluno ficou em recuperacao")
+    grauC = float(input("insira a nota do grau C: "))
+    substituir = input("substituir a nota do grau A (A) ou do grau B (B)? ").upper()
+    
+    if substituir == "A":
+        mediaFinal = ((grauC + grauB*2)/3)
+    elif substituir == "B":
+        mediaFinal = ((grauA + grauC*2)/3)
+    else: 
+        print("erro")
+        
+    if mediaFinal >= 6:
+        print("media o aluno foi aprovado com média", format(mediaFinal, '.2f'))
+    else:
+        print("o aluno foi reprovado com média", format(mediaFinal, '.2f'))
+
+###DUVIDA
 # 14) Criar um programa para identificar o valor a ser pago por um plano de saúde dada a idade do conveniado considerando que todos pagam R$ 300 e mais um adicional (se tiver dependentes) conforme a seguinte tabela:
 #     a) crianças com menos de 10 anos pagam R$100;
 #     b) dependentes com idade entre 10 e 30 anos pagam R$220;
 #     c) dependentes com idade entre 31 e 60 anos pagam R$ 395; e
 #     d) dependentes com mais de 60 anos pagam R$ 480.
+
+valorAdicional = 0 
+
+qtdDependentes = int(input("Digite o número de dependentes: "))
+
+for i in range(qtdDependentes):
+    idade = int(input(f"Digite a idade do dependente {[i] + 1}: "))
+    if idade < 10:
+        valorAdicional += 100
+    elif 10 <= idade <= 30:
+        valorAdicional += 220
+    elif 31 <= idade <= 60:
+        valorAdicional += 395
+    else:
+        valorAdicional += 480
+
+valorTotal = 300 + valorAdicional
+
+print(f"O valor a ser sera: R${valorTotal:.2f}")
+
 
 # 15) Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço
 # normal de etiqueta e a escolha da condição de pagamento. Utilize os códigos da tabela a seguir
