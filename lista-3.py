@@ -105,7 +105,6 @@ valorVenda = (1 + lucro) * valorCompra
 
 print(f"o valor da venda deve ser: {valorVenda}")
 
-***DUVIDASSSS
 # 9) Faça um conversor de câmbio de reais/dólar/euro. O usuário deve informar inicialmente a cotação de cada moeda em relação ao real. Depois apresente o seguinte menu:
 #     1) Converter de Real para Euro
 #     2) Converter de Real para Dólar
@@ -115,10 +114,10 @@ print(f"o valor da venda deve ser: {valorVenda}")
 #     6) Converter de Dólar para Real
 # Leia o valor a ser convertido na moeda de origem e imprima na tela a quantidade na moeda destino.
 
-    
-cotacaoDolar = float(input("insira a cotação do dólar:  "))
-cotacaoEuro = float(input("insira a cotação do euro: "))
-    
+   realEuro = float(input("insira a cotacao do Real para o Euro: "))
+realDolar = float(input("insira a cotacao do Real para o Dolar: "))
+euroDolar = float(input("insira a cotacao do Euro para o Dolar: "))
+
 print("Menu:")
 print("1) Converter de Real para Euro")
 print("2) Converter de Real para Dólar")
@@ -126,85 +125,41 @@ print("3) Converter de Euro para Dólar")
 print("4) Converter de Euro para Real")
 print("5) Converter de Dólar para Euro")
 print("6) Converter de Dólar para Real")
-    
-opcao = int(input("Escolha uma opção: "))
-    
+
+opcao = int(input("escolha uma opcao: "))
+
 if opcao == 1:
-    valor = float(input("Digite o valor em Reais: "))
-    resultado = valor / cotacaoEuro
-    print(f"Valor em Euro: {resultado}")
-        
+    valor = float(input("insira o valor em Reais: "))
+    conversao = valor * realEuro
+    print(f"valor em Euro: {conversao}")
+    
 elif opcao == 2:
-    valor = float(input("Digite o valor em Reais: "))
-    resultado = valor / cotacaoDolar
-    print(f"Valor em Dólar: {resultado}")
+    valor = float(input("insira o valor em Reais: "))
+    conversao = valor * realDolar
+    print(f"valor em Dólar: {conversao}")
     
 elif opcao == 3:
-    valor = float(input("Digite o valor em Euro: "))
-    resultado = valor / cotacaoEuro / cotacaoDolar
-    print(f"Valor em Dólar: {resultado}")
+    valor = float(input("insira o valor em Euro: "))
+    conversao = valor * euroDolar
+    print(f"valor em Dólar: {conversao}")
     
 elif opcao == 4:
-    valor = float(input("Digite o valor em Euro: "))
-    resultado = valor * cotacaoEuro
-    print(f"Valor em Reais: {resultado}")
+    valor = float(input("insira o valor em Euro: "))
+    conversao = valor / realEuro
+    print(f"valor em Reais: {conversao}")
     
 elif opcao == 5:
-    valor = float(input("Digite o valor em Dólar: "))
-    resultado = valor * cotacaoDolar
-    print(f"Valor em Euro: {resultado}")
+    valor = float(input("insira o valor em Dólar: "))
+    conversao = valor / euroDolar
+    print(f"valor em Euro: {conversao}")
     
 elif opcao == 6:
-    valor = float(input("Digite o valor em Dólar: "))
-    resultado = valor * cotacaoDolar
-    print(f"Valor em Reais: {resultado}")
+    valor = float(input("insira o valor em Dólar: "))
+    conversao = valor / realDolar
+    print(f"valor em Reais: {conversao}")
     
 else:
-    print("Opção inválida.")
-    
-ou 
-
-    real_para_euro = float(input("Digite a cotação de 1 Real para Euro: "))
-    real_para_dolar = float(input("Digite a cotação de 1 Real para Dólar: "))
-    euro_para_dolar = float(input("Digite a cotação de 1 Euro para Dólar: "))
-    
-    print("\nMenu:")
-    print("1) Converter de Real para Euro")
-    print("2) Converter de Real para Dólar")
-    print("3) Converter de Euro para Dólar")
-    print("4) Converter de Euro para Real")
-    print("5) Converter de Dólar para Euro")
-    print("6) Converter de Dólar para Real")
-    
-    opcao = int(input("\nEscolha uma opção: "))
-    
-    if opcao == 1:
-        valor = float(input("Digite o valor em Reais: "))
-        resultado = valor / real_para_euro
-        print(f"Valor em Euro: {resultado}")
-    elif opcao == 2:
-        valor = float(input("Digite o valor em Reais: "))
-        resultado = valor / real_para_dolar
-        print(f"Valor em Dólar: {resultado}")
-    elif opcao == 3:
-        valor = float(input("Digite o valor em Euro: "))
-        resultado = valor * euro_para_dolar
-        print(f"Valor em Dólar: {resultado}")
-    elif opcao == 4:
-        valor = float(input("Digite o valor em Euro: "))
-        resultado = valor / real_para_euro
-        print(f"Valor em Reais: {resultado}")
-    elif opcao == 5:
-        valor = float(input("Digite o valor em Dólar: "))
-        resultado = valor / euro_para_dolar
-        print(f"Valor em Euro: {resultado}")
-    elif opcao == 6:
-        valor = float(input("Digite o valor em Dólar: "))
-        resultado = valor / real_para_dolar
-        print(f"Valor em Reais: {resultado}")
-    else:
-        print("Opção inválida.")
-
+    print("erro") 
 
 
 # 10) Dados não precisam ser tão “quadrados”, ou cúbicos para ser mais exato. Faça um programa que simule dados de 4, 6, 8, 10, 12 ou 16 faces (apenas estes valores). Peça para o usuário informar no começo do programa quantas faces quer, para depois fazer o sorteio.
@@ -298,24 +253,41 @@ else:
 #     c) dependentes com idade entre 31 e 60 anos pagam R$ 395; e
 #     d) dependentes com mais de 60 anos pagam R$ 480.
 
-valorAdicional = 0 
+valorAdicional = 0
 
-qtdDependentes = int(input("Digite o número de dependentes: "))
+idadeConveniado = int(input("insira a idade do conveniado: "))
+qtdDependentes = int(input("insira a quantidade de dependentes: "))
+
+if idadeConveniado < 10:
+    valorAdicional += 100
+    
+elif 10 <= idadeConveniado <= 30:
+    valorAdicional += 220
+    
+elif 31 <= idadeConveniado <= 60:
+    valorAdicional += 395
+    
+else:
+    valorAdicional += 480
 
 for i in range(qtdDependentes):
-    idade = int(input(f"Digite a idade do dependente {[i] + 1}: "))
-    if idade < 10:
+    idadeDependente = int(input(f"insira a idade do dependente {i + 1}: "))
+    
+    if idadeDependente < 10:
         valorAdicional += 100
-    elif 10 <= idade <= 30:
+        
+    elif 10 <= idadeDependente <= 30:
         valorAdicional += 220
-    elif 31 <= idade <= 60:
+        
+    elif 31 <= idadeDependente <= 60:
         valorAdicional += 395
+        
     else:
         valorAdicional += 480
 
-valorTotal = 300 + valorAdicional
+valorTotal = 300 + (valorAdicional * qtdDependentes)
 
-print(f"O valor a ser sera: R${valorTotal:.2f}")
+print(f"o valor do plano de saúde sera: R${valorTotal:.2f}")
 
 
 # 15) Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço
@@ -327,3 +299,30 @@ print(f"O valor a ser sera: R${valorTotal:.2f}")
 #     4 - Em três vezes, preço normal de etiqueta mais juros de 10%
 # Leia o valor a ser convertido na moeda de origem e imprima na tela a quantidade na moeda
 # destino.
+
+precoProduto = float(input("insira o preco do produto: "))
+
+print("Formas de pagamento:")
+print("1 - à vista em dinheiro")
+print("2 - à vista no cartão de crédito")
+print("3 - em duas vezes")
+print("4 - em três vezes")
+
+pagamento = int(input("escolha uma opcao: "))
+
+if pagamento == 1:
+    valorFinal = precoProduto * 0.85  
+    
+elif pagamento == 2:
+    valorFinal = precoProduto * 0.90  
+    
+elif pagamento == 3:
+    valorFinal = precoProduto  
+    
+elif pagamento == 4:
+    valorFinal = precoProduto * 1.10  
+    
+else:
+    valorFinal = "erro"
+
+print(f"O valor a ser pago pelo produto é: R${valorFinal:.2f}")
