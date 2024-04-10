@@ -1,1 +1,3 @@
 python --version
+
+https://community.revelo.com.br/principais-bibliotecas-do-python/
