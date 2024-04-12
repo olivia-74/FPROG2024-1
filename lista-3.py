@@ -114,7 +114,7 @@ print(f"o valor da venda deve ser: {valorVenda}")
 #     6) Converter de Dólar para Real
 # Leia o valor a ser convertido na moeda de origem e imprima na tela a quantidade na moeda destino.
 
-   realEuro = float(input("insira a cotacao do Real para o Euro: "))
+realEuro = float(input("insira a cotacao do Real para o Euro: "))
 realDolar = float(input("insira a cotacao do Real para o Dolar: "))
 euroDolar = float(input("insira a cotacao do Euro para o Dolar: "))
 
