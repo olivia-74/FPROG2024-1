@@ -1,12 +1,32 @@
-1. Faça um algoritmo para:
-  a. Gerar e escrever todos os números inteiros do intervalo [0,100].
-  b. Gerar e escrever os números pares do intervalo [20,50].
-  c. Gerar e escrever os números inteiros do intervalo [25,70] em ordem decrescente.
-  d. Gerar e escrever os números ímpares do intervalo [25,95] em ordem decrescente.
-  e. Ler 15 números e escrever a soma e a média dos números lidos.
-  f. Ler 10 números inteiros e escrever a quantidade de números pares e a quantidade de números ímpares lidos.
-  g. Sortear 20 números inteiros entre -10 e 10 e imprimi-los acompanhados da mensagem “POSITIVO”, “NEGATIVO”, ou “NULO”, conforme o caso. No final, imprimir a quantidade de números positivos e negativos lidos.
-  h. Ler n números e imprimir no final a soma dos números lidos (obs.: n é a quantidade de números que deverão ser lidos e também deve ser lido do teclado)
+# 1. Faça um algoritmo para:
+#   a. Gerar e escrever todos os números inteiros do intervalo [0,100].
+  n = 0
+  while n <= 100:
+      print(n)
+      n = n + 1
+
+  # b. Gerar e escrever os números pares do intervalo [20,50].
+  n = 20
+  while n <= 50:
+      print(n)
+      n = n + 2
+  
+  # c. Gerar e escrever os números inteiros do intervalo [25,70] em ordem decrescente.
+  n = 70
+  while n >= 25:
+      print(n)
+      n = n - 1
+    
+  # d. Gerar e escrever os números ímpares do intervalo [25,95] em ordem decrescente.
+  n = 95
+  while n >= 25:
+      print(n)
+      n = n - 2
+    
+  # e. Ler 15 números e escrever a soma e a média dos números lidos.
+  # f. Ler 10 números inteiros e escrever a quantidade de números pares e a quantidade de números ímpares lidos.
+  # g. Sortear 20 números inteiros entre -10 e 10 e imprimi-los acompanhados da mensagem “POSITIVO”, “NEGATIVO”, ou “NULO”, conforme o caso. No final, imprimir a quantidade de números positivos e negativos lidos.
+  # h. Ler n números e imprimir no final a soma dos números lidos (obs.: n é a quantidade de números que deverão ser lidos e também deve ser lido do teclado)
 
 2. Implemente um programa que sorteia um número de 1 a 10 e dá ao usuário 3 tentativas de acertá-lo. A cada tentativa errada, o programa informa se o número a adivinhar está abaixo ou acima.
 
