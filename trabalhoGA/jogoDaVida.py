@@ -171,7 +171,7 @@ def Divisao(valor1, valor2):
     #  5 = pedagogia
     #  6 = administracao
 def Formatura(jogador):
-
+    a
 
 
 # rodada
