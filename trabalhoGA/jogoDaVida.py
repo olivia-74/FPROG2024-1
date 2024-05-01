@@ -1,57 +1,6 @@
-# import random
-
-# def JogarDado():
-#     resultado = random.randint(1, 6)
-#     print(f"Resultado do dado: {resultado}")
-#     return resultado
-
-# # Função para executar as regras do jogo
-# def ExecutarRegras(jogador, casa):
-#     jogada = JogarDado()  # Realiza a jogada do dado
-    
-#     if jogada < 3 or jogada == 6:
-#         casa += jogada
-#         print(f"{jogador} avançou {jogada} casa.")
-#     elif jogada == 3:
-#         casa -= 1
-#         print(f"{jogador} voltou 1 casa.")
-    
-#     return casa
-
-# # Quantidade de jogadores
-# while True:
-#     nJogadores = int(input("Número de jogadores (1 ou 2): "))
-#     if nJogadores == 1 or nJogadores == 2:
-#         break
-#     else:
-#         print("Insira apenas 1 ou 2 como número de jogadores")
-
-# # Tabuleiro com 21 casas
-# casa_jogador1 = 0
-# casa_jogador2 = 0
-
-# # Loop do jogo
-# while True:
-#     input("Jogador 1 - jogue o dado") 
-#     casa_jogador1 = ExecutarRegras("Jogador 1", casa_jogador1)
-#     if casa_jogador1 >= 21:
-#         print("Jogador 1 venceu!")
-#         break
-    
-#     if nJogadores == 2:
-#         input("Jogador 2 - jogue o dado")
-#         casa_jogador2 = ExecutarRegras("Jogador 2", casa_jogador2)
-#         if casa_jogador2 >= 21:
-#             print("Jogador 2 venceu!")
-#             break
-
-
-
 # variaveis
 import math
 import random
-casa = 0
-tabuleiro = []
 
 # quantidade de jogadores
 while True:
@@ -71,16 +20,11 @@ def JogarDado ():
 
 def ExecutarRegras (jogador, casa):
 
-    if jogada < 3 or 3 > jogada < 6:
-        jogada = jogarDado()
-        casa += jogada
-        print(f"{jogador} avançou {jogada} casa.")
     
     elif jogada == 3:
         casa -= 1
     elif jogada == 6:
         pass
-
 
 #💀: morreu - dar print dos dados dos jogadores e dizer quem ganhou (!!!)
 def Morrer (jogador):
@@ -162,7 +106,6 @@ def Divisao(valor1, valor2):
         num += 1
     print(f"6) os 5 primeiros numeros divisiveis por {valor1} e por {valor2} sao: {', '.join(map(str, divisiveis))}")
 
-
 #🎓: formatura - jogue o dado e decida os 6 possiveis valores:
     #  1 = medicina 
     #  2 = ciencia da computacao 
@@ -179,8 +122,6 @@ def main():
     for i in range (nJogadores):
         JogarDado(jogador)
 
-while nJogadores > 1:
-    main()
 
 
 print("O jogador", jogadores_restantes, "venceu!")
