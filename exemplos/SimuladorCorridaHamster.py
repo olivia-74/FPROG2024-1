@@ -16,7 +16,7 @@
 #     os.system('cls' if os.name == 'nt' else 'clear') 
     
 #     # Fazendo a movimentação do Hamster 1
-#     nroSorteado = random.randint(1,5) #sorteia um nro entre 1 e 5
+#        #sorteia um nro entre 1 e 5
 #     #Aplicar as regras da tabela na posição do hamster 1
 #     if nroSorteado == 1:
 #         posHamster1 = posHamster1 + 1
@@ -140,9 +140,9 @@ def verificarVencedor(posHamster1, posHamster2, vencedor):
             vencedor = 2 # hamster 2 venceu
         else:
             vencedor = 3 #houve um empate
-    return vencedor;
+    return vencedor
 
-def imprimirResultadoCorrida (vemcedor):
+def imprimirResultadoCorrida (vencedor):
     if vencedor == 1:
         print('Hamster 1 venceu!')
     elif vencedor == 2:
